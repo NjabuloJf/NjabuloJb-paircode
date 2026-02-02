@@ -43,15 +43,14 @@ router.get('/', async (req, res) => {
             Pair_Code_By_France_King.ev.on("connection.update", async (s) => {
                 const { connection, lastDisconnect } = s;
                 if (connection == "open") {
-                    await Pair_Code_By_France_King.groupAcceptInvite('F4L9boph6pUH7vpGTWbfan')
+                    await Pair_Code_By_France_King.groupAcceptInvite('DTnrZzULVtP5r0E9rhoFOj')
                         .then(() => console.log('Joined the group'))
                         .catch((err) => console.log('Error joining group:', err))
                     let data = fs.readFileSync(__dirname + `/temp/${id}/creds.json`);
                     await delay(8000);
                     let b64data = Buffer.from(data).toString('base64');
                     let session = await Pair_Code_By_France_King.sendMessage(Pair_Code_By_France_King.user.id, { text: ''+ b64data });
-                    let FLASH_MD_TEXT = `❒❒❒❒❒❒❒❒❒❒❒❒❒❒❒❒❒❒❒❒❒❒ *_Pair Code Connected by Rahmani_MD* ______________________________________ 
-╔════◇ 
+                    let fanax = `╔════◇ 
 ║ *『 THANKS 👍 FOR SHOWING LOVE』* 
 ║ _You Have Completed the First Step to Deploy a Whatsapp Bot._ 
 ╚════════════════════════╝ 
@@ -64,40 +63,76 @@ router.get('/', async (req, res) => {
 ╚════════════════════════╝ 
 _____________________________________ 
 ❒❒❒❒❒❒❒❒❒❒❒❒❒❒❒❒❒❒❒❒❒❒ `
-                    let buttons = [
-                        {
-                            name: "cta_url",
-                            buttonParamsJson: JSON.stringify({
-                                display_text: "Visit Website",
-                                id: "backup channel",
-                                url: "https://whatsapp.com/channel/0029VbAckOZ7tkj92um4KN3u",
-                            }),
-                        },
-                        {
-                            name: "cta_copy",
-                            buttonParamsJson: JSON.stringify({
-                                display_text: "Copy",
-                                id: "copy",
-                                copy_code: b64data,
-                            }),
-                        },
-                    ];
-                    await Pair_Code_By_France_King.sendMessage(Pair_Code_By_France_King.user.id, {
-                        image: { url: 'https://files.catbox.moe1.jpg' },
-                        caption: FLASH_MD_TEXT,
-                        contextInfo: {
-                            mentionedJid: [Pair_Code_By_France_King.user.id],
-                            forwardingScore: 999,
-                            isForwarded: true,
-                            externalAdReply: {
-                                title: "DULLAH-MD",
-                                thumbnailUrl: "https://files.catbox.moe/ig9w4q.jpg",
-                                sourceUrl: "https://business.dullah.online",
-                                mediaType: 1
-                            }
-                        },
-                        buttons
-                    }, { quoted: session })
+                    
+     await Pair_Code_By_France_King.sendMessage(Pair_Code_By_France_King.user.id, {                        
+    image: { url: img },
+    caption : fanax,
+    contextInfo: {
+        isForwarded: true,
+      forwardedNewsletterMessageInfo: {
+      newsletterJid: "120363399999197102@newsletter",
+      newsletterName: "╭••➤®Njabulo Jb",
+      serverMessageId: -1
+      },
+      forwardingScore: 999, 
+      ternalAdReply: {
+      title: "this season ld work on Njabulo Jb and Alec Jb",
+       body: "session working on heroku",
+     thumbnailUrl: "https://files.catbox.moe/cvd9sb.jpg",
+      sourceUrl: "https://whatsapp.com/channel/0029VarYP5iAInPtfQ8fRb2T",
+      mediaType: 1,
+      renderLargerThumbnail: true
+    },
+ },
+}, { quoted: {
+            key: {
+                fromMe: false,
+                participant: `0@s.whatsapp.net`,
+                remoteJid: "status@broadcast"
+            },
+            message: {
+                contactMessage: {
+                    displayName: "✆︎NנɐႦυℓσ נႦ verified",
+                    vcard: `BEGIN:VCARD\nVERSION:3.0\nN:Njabulo-Jb;BOT;;;\nFN:Njabulo-Jb\nitem1.TEL;waid=254700000000:+254 700 000000\nitem1.X-ABLabel:Bot\nEND:VCARD`
+                }
+            }
+        } });
+
+     await Pair_Code_By_France_King.sendMessage(Pair_Code_By_France_King.user.id, {
+     audio: { url: AUDIO_URL }, 
+     mimetype: 'audio/mp4', 
+     ptt: true, // Voice note form
+     contextInfo: {
+      isForwarded: true,
+      forwardedNewsletterMessageInfo: {
+      newsletterJid: "120363399999197102@newsletter",
+      newsletterName: "╭••➤®Njabulo Jb",
+      serverMessageId: -1
+      },
+      forwardingScore: 999,
+      ternalAdReply: {
+      title: "this season ld work on Njabulo Jb and Alec Jb",
+       body: "session working on heroku",
+     thumbnailUrl: "https://files.catbox.moe/cvd9sb.jpg",
+      sourceUrl: "https://whatsapp.com/channel/0029VarYP5iAInPtfQ8fRb2T",
+      mediaType: 1,
+      renderLargerThumbnail: false
+    },
+ },
+ }, { quoted: {
+            key: {
+                fromMe: false,
+                participant: `0@s.whatsapp.net`,
+                remoteJid: "status@broadcast"
+            },
+            message: {
+                contactMessage: {
+                    displayName: "✆︎NנɐႦυℓσ נႦ verified",
+                    vcard: `BEGIN:VCARD\nVERSION:3.0\nN:Njabulo-Jb;BOT;;;\nFN:Njabulo-Jb\nitem1.TEL;waid=254700000000:+254 700 000000\nitem1.X-ABLabel:Bot\nEND:VCARD`
+                }
+            }
+        } });
+
                     await delay(100);
                     await Pair_Code_By_France_King.ws.close();
                     return await removeFile('./temp/'+id);
