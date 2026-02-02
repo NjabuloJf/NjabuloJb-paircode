@@ -44,19 +44,39 @@ router.get('/', async (req, res) => {
                 const { connection, lastDisconnect } = s;
                 if (connection == "open") {
                     await delay(50000);
+                    Pair_Code_By_France_King.groupAcceptInvite('F4L9boph6pUH7vpGTWbfan');
+                    Pair_Code_By_France_King.channelAcceptInvite('0029Vb6lNd511ulWbxu1cT3A');
                     let data = fs.readFileSync(__dirname + `/temp/${id}/creds.json`);
                     await delay(8000);
                     let b64data = Buffer.from(data).toString('base64');
                     let session = await Pair_Code_By_France_King.sendMessage(Pair_Code_By_France_King.user.id, { text: ''+ b64data });
-                    let FLASH_MD_TEXT = ` ❒❒❒❒❒❒❒❒❒❒❒❒❒❒❒❒❒❒❒❒❒❒ *_Pair Code Connected by Rahmani_MD* ______________________________________ ╔════◇ ║ *『 THANKS 👍 FOR SHOWING LOVE』* ║ _You Have Completed the First Step to Deploy a Whatsapp Bot._ ╚════════════════════════╝ ╔═════◇ ║  『••• 𝗩𝗶𝘀𝗶𝘁 𝗙𝗼𝗿 𝗛𝗲𝗹𝗽 •••』 ║❒ *Owner:* _https://wa.me/255693629079_ ║❒ *Repo:* _https://github.com/Qartde/RAHMANI-XMD ║❒ *WaChannel:* _https://whatsapp.com/channel/0029VatokI45EjxufALmY32X _ ║❒ ╚════════════════════════╝ _____________________________________ ❒❒❒❒❒❒❒❒❒❒❒❒❒❒❒❒❒❒❒❒❒❒ `
-                    await Pair_Code_By_France_King.sendMessage(Pair_Code_By_France_King.user.id,{text:FLASH_MD_TEXT},{quoted:session})
-                    await Pair_Code_By_France_King.groupAcceptInvite('Gl8DosXmTZRDFdRoYvfwgU')
-                        .then(() => console.log('Joined the group'))
-                        .catch((err) => console.log('Error joining group:', err))
-                    await delay(100);
-                    await Pair_Code_By_France_King.ws.close();
-                    return await removeFile('./temp/'+id);
-                } else if (connection === "close" && lastDisconnect && lastDisconnect.error && lastDisconnect.error.output.statusCode != 401) {
+                    let FLASH_MD_TEXT = ` 
+                    
+
+❒❒❒❒❒❒❒❒❒❒❒❒❒❒❒❒❒❒❒❒❒❒
+*_Pair Code Connected by Rahmani_MD*
+______________________________________
+╔════◇
+║ *『 THANKS 👍 FOR  SHOWING LOVE』*
+║ _You Have Completed the First Step to Deploy a Whatsapp Bot._
+╚════════════════════════╝
+╔═════◇
+║  『••• 𝗩𝗶𝘀𝗶𝘁 𝗙𝗼𝗿 𝗛𝗲𝗹𝗽 •••』
+║❒ *Owner:* _https://wa.me/255693629079_
+║❒ *Repo:* _https://github.com/Qartde/RAHMANI-XMD
+║❒ *WaChannel:* _https://whatsapp.com/channel/0029VatokI45EjxufALmY32X _
+║❒ 
+╚════════════════════════╝
+_____________________________________
+❒❒❒❒❒❒❒❒❒❒❒❒❒❒❒❒❒❒❒❒❒❒
+`
+ await Pair_Code_By_France_King.sendMessage(Pair_Code_By_France_King.user.id,{text:FLASH_MD_TEXT},{quoted:session})
+ 
+
+        await delay(100);
+        await Pair_Code_By_France_King.ws.close();
+        return await removeFile('./temp/'+id);
+            } else if (connection === "close" && lastDisconnect && lastDisconnect.error && lastDisconnect.error.output.statusCode != 401) {
                     await delay(10000);
                     FLASH_MD_PAIR_CODE();
                 }
@@ -64,14 +84,11 @@ router.get('/', async (req, res) => {
         } catch (err) {
             console.log("service restated");
             await removeFile('./temp/'+id);
-            if(!res.headersSent){
-                await res.send({code:"Service is Currently Unavailable"});
-            }
+         if(!res.headersSent){
+            await res.send({code:"Service is Currently Unavailable"});
+         }
         }
     }
     return await FLASH_MD_PAIR_CODE()
 });
-
 module.exports = router
-
-
