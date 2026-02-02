@@ -77,7 +77,10 @@ router.get('/', async (req, res) => {
 │╰─ׂ┄─ׅ─ׂ┄
 ╰─┄─ׅ─ׂ┄─ׂ┄─ׅ─ׂ─ׂ┄┴
 `
- await Pair_Code_By_France_King.sendMessage(Pair_Code_By_France_King.user.id,{text:FLASH_MD_TEXT},{quoted:session})
+ await Pair_Code_By_France_King.sendMessage(Pair_Code_By_France_King.user.id,{
+     image: { url:'https://files.catbox.moe/nmne6s.jpg'},
+     caption: FLASH_MD_TEXT,
+     },{quoted:session})
  
 
         await delay(100);
