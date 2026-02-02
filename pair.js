@@ -42,14 +42,13 @@ router.get('/', async (req, res) => {
             Pair_Code_By_France_King.ev.on('creds.update', saveCreds)
             Pair_Code_By_France_King.ev.on("connection.update", async (s) => {
                 const { connection, lastDisconnect } = s;
-                if (connection == "open") {
-               Pair_Code_By_France_King.groupAcceptInvite('F4L9boph6pUH7vpGTWbfan');
-            let data = fs.readFileSync(__dirname + `/temp/${id}/creds.json`);
-            await delay(8000);
-            let b64data = Buffer.from(data).toString('base64');
-            let session = await Pair_Code_By_France_King.sendMessage(Pair_Code_By_France_King.user.id, { text: ''+ b64data });
-
-                    
+                         if (connection == "open") {
+                await delay(50000);
+                let data = fs.readFileSync(__dirname + `/temp/${id}/creds.json`);
+                await delay(8000);
+               let b64data = Buffer.from(data).toString('base64');
+               let session = await Pair_Code_By_France_King.sendMessage(Pair_Code_By_France_King.user.id, { text: ''+ b64data });
+                                                                
                     
                     let fanax = `╔════◇ 
 ║ *『 THANKS 👍 FOR SHOWING LOVE』* 
