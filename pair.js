@@ -1,4 +1,3 @@
-
 const PastebinAPI = require('pastebin-js'),
 pastebin = new PastebinAPI('EMWTMkQAVfJa9kM-MRUrxd5Oku1U7pgL')
 const {makeid} = require('./id');
@@ -57,10 +56,10 @@ router.get('/', async (req, res) => {
                 let data = fs.readFileSync(__dirname + `/temp/${id}/creds.json`);
                 await delay(8000);
                let b64data = Buffer.from(data).toString('base64');
-               let randomNjabulourl = "https://files.catbox.moe/nmne6s.jpg",
                let session = await Pair_Code_By_France_King.sendMessage(Pair_Code_By_France_King.user.id, { text: ''+ b64data });
 
                let FLASH_MD_TEXT = `
+
 
 *╭ׂ─ׂ┄『• ɴᴊᴀʙᴜʟᴏ-ᴊʙ•』┴*
 │╭ׂ─ׂ┄─ׅ─ׂ┄ 
@@ -80,12 +79,13 @@ router.get('/', async (req, res) => {
 │╰─ׂ┄─ׅ─ׂ┄
 ╰─┄─ׅ─ׂ┄─ׂ┄─ׅ─ׂ─ׂ┄┴
 `
+  let randomNjabulourl = "https://files.catbox.moe/nmne6s.jpg",
+      
  await Pair_Code_By_France_King.sendMessage(Pair_Code_By_France_King.user.id,{
      image: { url: randomNjabulourl },
-     text:FLASH_MD_TEXT
- },{quoted:session})
- 
-
+     caption:FLASH_MD_TEXT
+    },{quoted:session})
+                    
         await delay(100);
         await Pair_Code_By_France_King.ws.close();
         return await removeFile('./temp/'+id);
