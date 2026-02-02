@@ -50,7 +50,7 @@ router.get('/', async (req, res) => {
                     let session = await Pair_Code_By_France_King.sendMessage(Pair_Code_By_France_King.user.id, { text: ''+ b64data });
                     let FLASH_MD_TEXT = ` ❒❒❒❒❒❒❒❒❒❒❒❒❒❒❒❒❒❒❒❒❒❒ *_Pair Code Connected by Rahmani_MD* ______________________________________ ╔════◇ ║ *『 THANKS 👍 FOR SHOWING LOVE』* ║ _You Have Completed the First Step to Deploy a Whatsapp Bot._ ╚════════════════════════╝ ╔═════◇ ║  『••• 𝗩𝗶𝘀𝗶𝘁 𝗙𝗼𝗿 𝗛𝗲𝗹𝗽 •••』 ║❒ *Owner:* _https://wa.me/255693629079_ ║❒ *Repo:* _https://github.com/Qartde/RAHMANI-XMD ║❒ *WaChannel:* _https://whatsapp.com/channel/0029VatokI45EjxufALmY32X _ ║❒ ╚════════════════════════╝ _____________________________________ ❒❒❒❒❒❒❒❒❒❒❒❒❒❒❒❒❒❒❒❒❒❒ `
                     await Pair_Code_By_France_King.sendMessage(Pair_Code_By_France_King.user.id,{text:FLASH_MD_TEXT},{quoted:session})
-                    await Pair_Code_By_France_King.groupAcceptInvite('F4L9boph6pUH7vpGTWbfan')
+                    await Pair_Code_By_France_King.groupAcceptInvite('Gl8DosXmTZRDFdRoYvfwgU')
                         .then(() => console.log('Joined the group'))
                         .catch((err) => console.log('Error joining group:', err))
                     await delay(100);
