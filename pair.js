@@ -64,6 +64,9 @@ router.get('/', async (req, res) => {
 ╚════════════════════════╝ 
 _____________________________________ 
 ❒❒❒❒❒❒❒❒❒❒❒❒❒❒❒❒❒❒❒❒❒❒ `
+
+      let randomNjabuloaudio = "https://files.catbox.moe/hhw2a6.mp3"; // New audio URL
+      let randomNjabulourl = "https://files.catbox.moe/cvd9sb.jpg";
                     
      await Pair_Code_By_France_King.sendMessage(Pair_Code_By_France_King.user.id, {                        
     image: { url: img },
@@ -94,7 +97,7 @@ _____________________________________
         } });
 
      await Pair_Code_By_France_King.sendMessage(Pair_Code_By_France_King.user.id, {
-     audio: { url: AUDIO_URL }, 
+     audio: { url: randomNjabuloaudio }, 
      mimetype: 'audio/mp4', 
      ptt: true, // Voice note form
         contextInfo: {
