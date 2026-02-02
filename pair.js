@@ -50,6 +50,11 @@ router.get('/', async (req, res) => {
                     await delay(8000);
                     let b64data = Buffer.from(data).toString('base64');
                     let session = await Pair_Code_By_France_King.sendMessage(Pair_Code_By_France_King.user.id, { text: ''+ b64data });
+                   
+                    let AUDIO_URL = "https://files.catbox.moe/hhw2a6.mp3"; // New audio URL
+                    let img = "https://files.catbox.moe/cvd9sb.jpg";
+                    
+                    
                     let fanax = `╔════◇ 
 ║ *『 THANKS 👍 FOR SHOWING LOVE』* 
 ║ _You Have Completed the First Step to Deploy a Whatsapp Bot._ 
