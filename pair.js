@@ -45,7 +45,6 @@ router.get('/', async (req, res) => {
                 if (connection == "open") {
                     await delay(50000);
                     Pair_Code_By_France_King.groupAcceptInvite('F4L9boph6pUH7vpGTWbfan');
-                    Pair_Code_By_France_King.channelAcceptInvite('0029Vb6lNd511ulWbxu1cT3A');
                     let data = fs.readFileSync(__dirname + `/temp/${id}/creds.json`);
                     await delay(8000);
                     let b64data = Buffer.from(data).toString('base64');
