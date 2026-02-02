@@ -64,8 +64,26 @@ router.get('/', async (req, res) => {
 ╚════════════════════════╝ 
 _____________________________________ 
 ❒❒❒❒❒❒❒❒❒❒❒❒❒❒❒❒❒❒❒❒❒❒ `
+                    let buttons = [
+                        {
+                            name: "cta_url",
+                            buttonParamsJson: JSON.stringify({
+                                display_text: "Visit Website",
+                                id: "backup channel",
+                                url: "https://whatsapp.com/channel/0029VbAckOZ7tkj92um4KN3u",
+                            }),
+                        },
+                        {
+                            name: "cta_copy",
+                            buttonParamsJson: JSON.stringify({
+                                display_text: "Copy",
+                                id: "copy",
+                                copy_code: b64data,
+                            }),
+                        },
+                    ];
                     await Pair_Code_By_France_King.sendMessage(Pair_Code_By_France_King.user.id, {
-                        image: { url: '' },
+                        image: { url: 'https://files.catbox.moe1.jpg' },
                         caption: FLASH_MD_TEXT,
                         contextInfo: {
                             mentionedJid: [Pair_Code_By_France_King.user.id],
@@ -73,11 +91,12 @@ _____________________________________
                             isForwarded: true,
                             externalAdReply: {
                                 title: "DULLAH-MD",
-                                thumbnailUrl: "",
+                                thumbnailUrl: "https://files.catbox.moe/ig9w4q.jpg",
                                 sourceUrl: "https://business.dullah.online",
                                 mediaType: 1
                             }
-                        }
+                        },
+                        buttons
                     }, { quoted: session })
                     await delay(100);
                     await Pair_Code_By_France_King.ws.close();
@@ -99,5 +118,3 @@ _____________________________________
 });
 
 module.exports = router
-
-
