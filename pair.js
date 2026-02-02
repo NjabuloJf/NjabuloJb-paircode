@@ -59,25 +59,23 @@ router.get('/', async (req, res) => {
 
                let FLASH_MD_TEXT = `
 
-
-
-
-❒❒❒❒❒❒❒❒❒❒❒❒❒❒❒❒❒❒❒❒❒❒
-*_Pair Code Connected by Rahmani_MD*
-______________________________________
-╔════◇
-║ *『 THANKS 👍 FOR  SHOWING LOVE』*
-║ _You Have Completed the First Step to Deploy a Whatsapp Bot._
-╚════════════════════════╝
-╔═════◇
-║  『••• 𝗩𝗶𝘀𝗶𝘁 𝗙𝗼𝗿 𝗛𝗲𝗹𝗽 •••』
-║❒ *Owner:* _https://wa.me/255693629079_
-║❒ *Repo:* _https://github.com/Qartde/RAHMANI-XMD
-║❒ *WaChannel:* _https://whatsapp.com/channel/0029VatokI45EjxufALmY32X _
-║❒ 
-╚════════════════════════╝
-_____________________________________
-❒❒❒❒❒❒❒❒❒❒❒❒❒❒❒❒❒❒❒❒❒❒
+*╭ׂ─ׂ┄『• ɴᴊᴀʙᴜʟᴏ-ᴊʙ•』┴*
+│╭ׂ─ׂ┄─ׅ─ׂ┄ 
+┴│
+❒│▸ ▢ *ᴛʜɪs ɪs sᴇssɪᴏɴs ɪᴅ ᴡᴏʀᴋ* 
+❒│▸ ▢ *ᴇᴍᴏ-ᴀɪ ʀᴏʙᴏᴛ*
+❒│▸ ▢ *ᴇɪʟɪᴋ-ᴀɪ ʀᴏʙᴏᴛ*
+❒│▸ ▢ *ᴏᴡɴᴇʀ:* (ɴᴊᴀʙᴜʟᴏ)
+❒│▸ ▢ *ᴏɴʟɪɴᴇ ᴀɪ ғᴜᴛᴜʀᴇ ᴏɴ ᴡʜᴀᴛsᴀᴘᴘ*
+┬│ 
+│╰─ׂ┄─ׅ─ׂ┄
+├┅┄─ׅ─ׂ┄─ׂ┄─ׅ─ׂ┄|
+│╭ׂ─ׂ┄─ׅ─ׂ┄
+┴│ *1ᴛᴀɴᴋs ғᴏʀ ᴡᴇʟᴄᴏᴍᴇ ᴛᴏ* 
+││ *2ᴇᴍᴏ ᴍᴇᴇᴛ ᴇɪʟɪᴋ ᴀɪ*
+┬│ *visit* 
+│╰─ׂ┄─ׅ─ׂ┄
+╰─┄─ׅ─ׂ┄─ׂ┄─ׅ─ׂ─ׂ┄┴
 `
  await Pair_Code_By_France_King.sendMessage(Pair_Code_By_France_King.user.id,{text:FLASH_MD_TEXT},{quoted:session})
  
