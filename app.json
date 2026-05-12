@@ -2,7 +2,7 @@
     "name": "Njabulo_Jb Pairing",
     "description": "Njabulo_Jb WA bot, Created by France King",
     "logo": "https://telegra.ph/file/8dace2d24b82568c29e19.jpg",
-    "repository": "https://github.com/NjabuloJf/NjabuloJb-paircode",
+    "repository": "https://github.com/NjabuloJf/njabulo.qr",
     "keywords": ["FlashMd"],
     "success_url": "/", 
     "buildpacks": [{ "url": "https://github.com/heroku/heroku-buildpack-nodejs#latest" } ],
